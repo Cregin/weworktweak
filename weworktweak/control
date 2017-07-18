@@ -1,0 +1,9 @@
+Package: com.TFDefaultDevelop.weworktweak
+Name: weworktweak
+Depends: mobilesubstrate
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: An awesome MobileSubstrate tweak!
+Maintainer: ssyzh
+Author: ssyzh
+Section: Tweaks

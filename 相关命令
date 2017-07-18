@@ -1,0 +1,24 @@
+动态库路径
+/Library/MobileSubstrate/DynamicLibraries
+
+// 查找进程
+ps -e | grep wework
+/var/mobile/Containers/Bundle/Application/2DDF050B-0566-4688-9E9A-257482835327/wework.app/wework
+
+// cycript操作
+cycript -p wework
+
+// wework Documents 目录
+NSHomeDirectory()
+@"/var/mobile/Containers/Data/Application/C4E60B00-20A5-4B95-BFB0-0471A249E3FC"
+/var/mobile/Containers/Data/Application/C4E60B00-20A5-4B95-BFB0-0471A249E3FC/Documents
+
+//拷贝 dumpdecrypted
+scp /Users/haosun/Desktop/dumpdecrypted_9.dylib root@192.168.2.8:/var/mobile/Containers/Data/Application/C4E60B00-20A5-4B95-BFB0-0471A249E3FC/Documents
+
+// 查看是否加密
+otool -l Wechat | grep crypt
+// 修改动态库依赖项
+install_name_tool -change /Library/Frameworks/CydiaSubstrate.framework/CydiaSubstrate @loader_path/libsubstrate.dylib weworktweak.dylib
+// 动态链接库注入二进制文件
+/Users/haosun/Desktop/theos/optool install -c load -p "@executable_path/weworktweak.dylib" -t wework.app/wework
