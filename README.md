@@ -6,7 +6,7 @@
 ![设置界面](/img/set.PNG)
 
 重签名安装
-下载`wework.zip`文件链接: https://pan.baidu.com/s/1o8FjDX4 密码: jmzu
+下载`wework.zip`文件链接: https://pan.baidu.com/s/1eSH6AEA 密码: waqj
 
 解压`wework.zip`，然后打开 `iOS App Signer`，选择`wework.app`和你要使用的证书和对应的配置文件，不能选错哦。最后start保存就可以导出ipa了。
 
